@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5735C31E37D9A69C10E478E3 /* Pods_ScrollingNavbarDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16AAA5B02FFC5555D34B6CC3 /* Pods_ScrollingNavbarDemoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5735C31E37D9A69C10E478E3 /* Pods_ScrollingNavbarDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16AAA5B02FFC5555D34B6CC3 /* Pods_ScrollingNavbarDemoTests.framework */; };
 		652BE2D41B62805C00DE75C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652BE2D31B62805C00DE75C7 /* AppDelegate.swift */; };
 		652BE2D61B62805C00DE75C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652BE2D51B62805C00DE75C7 /* ViewController.swift */; };
 		652BE2D91B62805C00DE75C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652BE2D71B62805C00DE75C7 /* Main.storyboard */; };
@@ -17,7 +17,7 @@
 		658FA1721B836D9C00EB32A4 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FA1711B836D9C00EB32A4 /* ScrollViewController.swift */; };
 		658FA1781B837C6100EB32A4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FA1771B837C6100EB32A4 /* TableViewController.swift */; };
 		658FA17A1B8386EB00EB32A4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FA1791B8386EB00EB32A4 /* WebViewController.swift */; };
-		C70C6CCD6CF910D9EA38A854 /* Pods_ScrollingNavbarDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4E9D2B96711325855682D /* Pods_ScrollingNavbarDemo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C70C6CCD6CF910D9EA38A854 /* Pods_ScrollingNavbarDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B4E9D2B96711325855682D /* Pods_ScrollingNavbarDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 		652BE2CE1B62805C00DE75C7 /* ScrollingNavbarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingNavbarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		652BE2D21B62805C00DE75C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652BE2D31B62805C00DE75C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		652BE2D51B62805C00DE75C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		652BE2D51B62805C00DE75C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		652BE2D81B62805C00DE75C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		652BE2DA1B62805C00DE75C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		652BE2DD1B62805C00DE75C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -104,12 +104,9 @@
 		652BE2D01B62805C00DE75C7 /* ScrollingNavbarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				65A2F2121BE500AF00CC2490 /* Resources */,
 				658FA1701B836D9100EB32A4 /* ViewControllers */,
 				652BE2D31B62805C00DE75C7 /* AppDelegate.swift */,
-				652BE2D51B62805C00DE75C7 /* ViewController.swift */,
-				652BE2D71B62805C00DE75C7 /* Main.storyboard */,
-				652BE2DA1B62805C00DE75C7 /* Images.xcassets */,
-				652BE2DC1B62805C00DE75C7 /* LaunchScreen.xib */,
 				652BE2D11B62805C00DE75C7 /* Supporting Files */,
 			);
 			path = ScrollingNavbarDemo;
@@ -143,11 +140,22 @@
 		658FA1701B836D9100EB32A4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				652BE2D51B62805C00DE75C7 /* ViewController.swift */,
 				658FA1711B836D9C00EB32A4 /* ScrollViewController.swift */,
 				658FA1771B837C6100EB32A4 /* TableViewController.swift */,
 				658FA1791B8386EB00EB32A4 /* WebViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		65A2F2121BE500AF00CC2490 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				652BE2D71B62805C00DE75C7 /* Main.storyboard */,
+				652BE2DA1B62805C00DE75C7 /* Images.xcassets */,
+				652BE2DC1B62805C00DE75C7 /* LaunchScreen.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		E34D1C265FEB2D387453D391 /* Pods */ = {
@@ -498,6 +506,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.fancypixel.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -510,6 +519,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.fancypixel.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

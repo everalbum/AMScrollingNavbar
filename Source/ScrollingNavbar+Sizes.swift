@@ -7,15 +7,43 @@ extension ScrollingNavigationController {
 
     // MARK: - View sizing
 
-    func fullNavbarHeight() -> CGFloat {
-        return navbarHeight() + statusBar()
+    var fullNavbarHeight: CGFloat {
+        return navbarHeight + statusBarHeight
     }
 
-    func navbarHeight() -> CGFloat {
+    var navbarHeight: CGFloat {
         return navigationBar.frame.size.height
     }
 
-    func statusBar() -> CGFloat {
+    var statusBarHeight: CGFloat {
         return UIApplication.sharedApplication().statusBarFrame.size.height
+    }
+
+    var tabBarOffset: CGFloat {
+        // Only account for the tab bar if a tab bar controller is present and the bar is not translucent
+        if let tabBarController = tabBarController {
+            return tabBarController.tabBar.translucent ? 0 : tabBarController.tabBar.frame.height
+        }
+        return 0
+    }
+
+    func scrollView() -> UIScrollView? {
+        if let webView = self.scrollableView as? UIWebView {
+            return webView.scrollView
+        } else {
+            return scrollableView as? UIScrollView
+        }
+    }
+
+    var contentOffset: CGPoint {
+        return scrollView()?.contentOffset ?? CGPointZero
+    }
+
+    var contentSize: CGSize {
+        return scrollView()?.contentSize ?? CGSizeZero
+    }
+
+    var deltaLimit: CGFloat {
+        return navbarHeight - statusBarHeight
     }
 }
